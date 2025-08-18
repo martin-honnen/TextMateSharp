@@ -1,0 +1,179 @@
+{
+  "name": "XPath 3.1",
+  "scopeName": "source.xpath",
+  "fileTypes": [
+    "xpath"
+  ],
+  "patterns": [
+    { "include": "#comment" },
+    { "include": "#strings" },
+    { "include": "#variables" },
+    { "include": "#numbers" },
+    { "include": "#axes" },
+    { "include": "#node-tests" },
+    { "include": "#keywords" },
+    { "include": "#operators" },
+    { "include": "#function-calls" },
+    { "include": "#punctuation" }
+  ],
+  "repository": {
+    "comment": {
+      "name": "comment.block.xpath",
+      "begin": "\\(:",
+      "beginCaptures": {
+        "0": { "name": "punctuation.definition.comment.begin.xpath" }
+      },
+      "end": ":\\)",
+      "endCaptures": {
+        "0": { "name": "punctuation.definition.comment.end.xpath" }
+      },
+      "patterns": [
+        { "include": "#comment" }
+      ]
+    },
+    "strings": {
+      "patterns": [
+        {
+          "name": "string.quoted.single.xpath",
+          "begin": "'",
+          "beginCaptures": { "0": { "name": "punctuation.definition.string.begin.xpath" } },
+          "end": "'",
+          "endCaptures": { "0": { "name": "punctuation.definition.string.end.xpath" } },
+          "patterns": [
+            {
+              "name": "constant.character.escape.xpath",
+              "match": "''"
+            }
+          ]
+        },
+        {
+          "name": "string.quoted.double.xpath",
+          "begin": "\"",
+          "beginCaptures": { "0": { "name": "punctuation.definition.string.begin.xpath" } },
+          "end": "\"",
+          "endCaptures": { "0": { "name": "punctuation.definition.string.end.xpath" } },
+          "patterns": [
+            {
+              "name": "constant.character.escape.xpath",
+              "match": "\"\""
+            }
+          ]
+        }
+      ]
+    },
+    "variables": {
+      "patterns": [
+        {
+          "name": "variable.other.xpath",
+          "match": "\\$[A-Za-z_][\\w\\-\\.]*(:[A-Za-z_][\\w\\-\\.]*)?"
+        }
+      ]
+    },
+    "numbers": {
+      "patterns": [
+        {
+          "name": "constant.numeric.xpath",
+          "match": "(?<![\\w\\$])(?:\\d+\\.\\d*|\\.\\d+|\\d+)(?:[eE][+\\-]?\\d+)?"
+        }
+      ]
+    },
+    "axes": {
+      "patterns": [
+        {
+          "name": "keyword.other.axis.xpath",
+          "match": "\\b(ancestor|ancestor-or-self|attribute|child|descendant|descendant-or-self|following|following-sibling|parent|preceding|preceding-sibling|self)\\s*(?=::)"
+        }
+      ]
+    },
+    "node-tests": {
+      "patterns": [
+        {
+          "name": "support.type.node.xpath",
+          "match": "\\b(document-node|node|text|comment|processing-instruction|element|attribute|schema-element|schema-attribute)\\s*(?=\\()"
+        }
+      ]
+    },
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.operator.word.xpath",
+          "match": "\\b(and|or|div|idiv|mod|intersect|except|union)\\b"
+        },
+        {
+          "name": "keyword.control.conditional.xpath",
+          "match": "\\b(if|then|else)\\b"
+        },
+        {
+          "name": "keyword.control.quantifier.xpath",
+          "match": "\\b(some|every|satisfies)\\b"
+        },
+        {
+          "name": "keyword.control.binding.xpath",
+          "match": "\\b(for|let|return|in|as|to)\\b"
+        },
+        {
+          "name": "keyword.operator.type.xpath",
+          "match": "\\b(instance|of|treat|castable|cast)\\b"
+        }
+      ]
+    },
+    "operators": {
+      "patterns": [
+        {
+          "name": "keyword.operator.xpath",
+          "match": "(=>|\\!|\\|\\||\\?|\\*\\*|\\.|\\.|\\/\\/|\\/|\\*|\\+|\\-|<=|>=|!=|=|<|>)"
+        }
+      ]
+    },
+    "function-calls": {
+      "patterns": [
+        {
+          "name": "support.function.builtin.xpath",
+          "match": "\\b(abs|ceiling|floor|round|round-half-to-even|round-half-to-odd|string|concat|contains|starts-with|ends-with|substring|substring-before|substring-after|string-length|normalize-space|translate|upper-case|lower-case|matches|replace|tokenize|codepoints-to-string|string-to-codepoints|contains-token|encode-for-uri|iri-to-uri|escape-html-uri|resolve-uri|number|boolean|not|exists|empty|head|tail|reverse|distinct-values|index-of|insert-before|remove|subsequence|unordered|zero-or-one|one-or-more|exactly-one|deep-equal|trace|error|format-integer|format-number|analyze-string|apply|fold-left|fold-right|for-each|for-each-pair)\\s*(?=\\()"
+        },
+        {
+          "name": "entity.name.function.xpath",
+          "match": "\\b[A-Za-z_][\\w\\-\\.]*(:[A-Za-z_][\\w\\-\\.]*)?\\s*(?=\\()"
+        }
+      ]
+    },
+    "punctuation": {
+      "patterns": [
+        {
+          "name": "punctuation.section.group.begin.xpath",
+          "match": "\\("
+        },
+        {
+          "name": "punctuation.section.group.end.xpath",
+          "match": "\\)"
+        },
+        {
+          "name": "punctuation.section.brackets.begin.xpath",
+          "match": "\\["
+        },
+        {
+          "name": "punctuation.section.brackets.end.xpath",
+          "match": "\\]"
+        },
+        {
+          "name": "punctuation.section.braces.begin.xpath",
+          "match": "\\{"
+        },
+        {
+          "name": "punctuation.section.braces.end.xpath",
+          "match": "\\}"
+        },
+        {
+          "name": "punctuation.separator.sequence.xpath",
+          "match": ","
+        },
+        {
+          "name": "punctuation.separator.key-value.xpath",
+          "match": ":"
+        }
+      ]
+    }
+  },
+  "uuid": "6f2f9c0e-9d9f-4a9a-9a1f-56d2e3b0d3a1",
+  "version": "0.1.0"
+}

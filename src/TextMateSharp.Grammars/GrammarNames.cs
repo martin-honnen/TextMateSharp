@@ -52,6 +52,7 @@
             "Typst",
             "VB",
             "XML",
+            "XPath",
             "YAML"
         };
     }

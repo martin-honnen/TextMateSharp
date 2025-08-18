@@ -1,0 +1,9 @@
+fold-left(
+  1 to 10, 
+  random-number-generator(current-dateTime()),
+  function($a, $i) {
+    head($a)?next(),
+    tail($a),
+    (head($a)?number * 100) => floor()
+  }
+) => tail()

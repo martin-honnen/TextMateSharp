@@ -4,6 +4,10 @@
       "commandName": "Project",
       "commandLineArgs": "../../../testdata/samplefiles/sample.cs"
     },
+    "TextMateSharp.Demo - xpathfile": {
+      "commandName": "Project",
+      "commandLineArgs": "../../../testdata/samplefiles/sample.xpath"
+    },
     "TexMateSharp.Demo - bigfile": {
       "commandName": "Project",
       "commandLineArgs": "../../../testdata/samplefiles/bigfile.cs"

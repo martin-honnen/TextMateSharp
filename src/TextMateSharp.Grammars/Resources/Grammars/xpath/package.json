@@ -1,0 +1,37 @@
+{
+  "name": "xpath",
+  "displayName": "%displayName%",
+  "description": "%description%",
+  "version": "1.0.0",
+  "publisher": "vscode",
+  "license": "MIT",
+  "engines": {
+    "vscode": "*"
+  },
+  "contributes": {
+    "languages": [
+      {
+        "id": "xpath",
+        "extensions": [
+          ".xpath"
+        ],
+        "aliases": [
+          "XPath",
+          "xpath"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "xpath",
+        "scopeName": "source.xpath",
+        "path": "./syntaxes/xpath.tmLanguage.json"
+      }
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/microsoft/vscode.git"
+  }
+}
