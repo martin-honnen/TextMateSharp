@@ -1,5 +1,5 @@
 {
-  "name": "XPath 3.1",
+"name": "XPath 3.1",
   "scopeName": "source.xpath",
   "fileTypes": [
     "xpath"
@@ -140,8 +140,12 @@
           "match": "\\barray:[A-Za-z_][\\w\\-\\.]*\\s*(?=\\()"
         },
         {
+          "name": "support.function.library.fn.xpath",
+          "match": "\\bfn:(?:(?:abs|adjust-date-to-timezone|adjust-dateTime-to-timezone|adjust-time-to-timezone|analyze-string|apply|available-environment-variables|avg|base-uri|boolean|ceiling|codepoint-equal|codepoints-to-string|collection|compare|concat|contains|contains-token|current-date|current-dateTime|current-time|data|dateTime|days-from-duration|deep-equal|default-collation|default-language|distinct-values|doc|doc-available|document-uri|empty|encode-for-uri|ends-with|environment-variable|error|escape-html-uri|exists|exactly-one|false|filter|floor|fold-left|fold-right|for-each|for-each-pair|format-date|format-dateTime|format-integer|format-number|function-arity|function-lookup|function-name|head|hours-from-dateTime|hours-from-duration|hours-from-time|id|idref|implicit-timezone|in-scope-prefixes|index-of|insert-before|iri-to-uri|json-doc|json-to-xml|lang|last|load-xquery-module|local-name|local-name-from-QName|lower-case|max|min|minutes-from-dateTime|minutes-from-duration|minutes-from-time|month-from-date|month-from-dateTime|months-from-duration|name|namespace-uri|namespace-uri-for-prefix|namespace-uri-from-QName|node-name|nilled|normalize-space|normalize-unicode|not|number|one-or-more|outermost|innermost|parse-json|parse-xml|parse-xml-fragment|path|position|prefix-from-QName|random-number-generator|remove|replace|resolve-QName|resolve-uri|reverse|root|round|round-half-to-even|round-half-to-odd|seconds-from-dateTime|seconds-from-duration|seconds-from-time|serialize|starts-with|static-base-uri|string|string-join|string-length|string-to-codepoints|subsequence|sum|tail|timezone-from-date|timezone-from-dateTime|timezone-from-time|tokenize|trace|translate|true|unordered|upper-case|uri-collection|year-from-date|year-from-dateTime|years-from-duration|unparsed-text|unparsed-text-available|unparsed-text-lines|unparsed-entity-uri|unparsed-entity-public-id))\\s*(?=\\()"
+        },
+        {
           "name": "support.function.builtin.xpath",
-          "match": "\\b(abs|ceiling|floor|round|round-half-to-even|round-half-to-odd|string|concat|contains|starts-with|ends-with|substring|substring-before|substring-after|string-length|normalize-space|translate|upper-case|lower-case|matches|replace|tokenize|codepoints-to-string|string-to-codepoints|contains-token|encode-for-uri|iri-to-uri|escape-html-uri|resolve-uri|number|boolean|not|exists|empty|head|tail|reverse|distinct-values|index-of|insert-before|remove|subsequence|unordered|zero-or-one|one-or-more|exactly-one|deep-equal|trace|error|format-integer|format-number|analyze-string|apply|fold-left|fold-right|for-each|for-each-pair)\\s*(?=\\()"
+          "match": "\\b(?:abs|adjust-date-to-timezone|adjust-dateTime-to-timezone|adjust-time-to-timezone|analyze-string|apply|available-environment-variables|avg|base-uri|boolean|ceiling|codepoint-equal|codepoints-to-string|collection|compare|concat|contains|contains-token|current-date|current-dateTime|current-time|data|dateTime|days-from-duration|deep-equal|default-collation|default-language|distinct-values|doc|doc-available|document-uri|empty|encode-for-uri|ends-with|environment-variable|error|escape-html-uri|exists|exactly-one|false|filter|floor|fold-left|fold-right|for-each|for-each-pair|format-date|format-dateTime|format-integer|format-number|function-arity|function-lookup|function-name|head|hours-from-dateTime|hours-from-duration|hours-from-time|id|idref|implicit-timezone|in-scope-prefixes|index-of|insert-before|iri-to-uri|json-doc|json-to-xml|lang|last|load-xquery-module|local-name|local-name-from-QName|lower-case|max|min|minutes-from-dateTime|minutes-from-duration|minutes-from-time|month-from-date|month-from-dateTime|months-from-duration|name|namespace-uri|namespace-uri-for-prefix|namespace-uri-from-QName|node-name|nilled|normalize-space|normalize-unicode|not|number|one-or-more|outermost|innermost|parse-json|parse-xml|parse-xml-fragment|path|position|prefix-from-QName|random-number-generator|remove|replace|resolve-QName|resolve-uri|reverse|root|round|round-half-to-even|round-half-to-odd|seconds-from-dateTime|seconds-from-duration|seconds-from-time|serialize|starts-with|static-base-uri|string|string-join|string-length|string-to-codepoints|subsequence|sum|tail|timezone-from-date|timezone-from-dateTime|timezone-from-time|tokenize|trace|translate|true|unordered|upper-case|uri-collection|year-from-date|year-from-dateTime|years-from-duration|unparsed-text|unparsed-text-available|unparsed-text-lines|unparsed-entity-uri|unparsed-entity-public-id)\\s*(?=\\()"
         },
         {
           "name": "entity.name.function.xpath",
@@ -187,5 +191,5 @@
     }
   },
   "uuid": "6f2f9c0e-9d9f-4a9a-9a1f-56d2e3b0d3a1",
-  "version": "0.2.0"
+  "version": "0.3.0"
 }
