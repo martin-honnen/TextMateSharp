@@ -6,7 +6,7 @@
     },
     "TextMateSharp.Demo - xpathfile": {
       "commandName": "Project",
-      "commandLineArgs": "../../../testdata/samplefiles/sample.xpath"
+      "commandLineArgs": "../../../testdata/samplefiles/sample2.xpath"
     },
     "TexMateSharp.Demo - bigfile": {
       "commandName": "Project",
