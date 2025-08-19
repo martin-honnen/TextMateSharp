@@ -12,6 +12,10 @@
       "commandName": "Project",
       "commandLineArgs": "../../../testdata/samplefiles/sample.xquery"
     },
+    "TextMateSharp.Demo - xqueryfile2": {
+      "commandName": "Project",
+      "commandLineArgs": "../../../testdata/samplefiles/sample2.xquery"
+    },
     "TexMateSharp.Demo - bigfile": {
       "commandName": "Project",
       "commandLineArgs": "../../../testdata/samplefiles/bigfile.cs"

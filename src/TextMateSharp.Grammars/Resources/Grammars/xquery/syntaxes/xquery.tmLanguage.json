@@ -103,6 +103,52 @@
         }
       ]
     },
+
+    "attribute-values": {
+      "patterns": [
+        {
+          "name": "string.quoted.double.attribute.xquery",
+          "begin": "\"",
+          "beginCaptures": { "0": { "name": "punctuation.definition.string.begin.xquery" } },
+          "end": "\"",
+          "endCaptures": { "0": { "name": "punctuation.definition.string.end.xquery" } },
+          "patterns": [
+            { "name": "constant.character.escape.xquery", "match": "\"\"" },
+            { "name": "constant.character.escape.xquery", "match": "\\{\\{|\\}\\}" },
+            { "name": "constant.character.entity.xquery", "match": "&(?:lt|gt|amp|quot|apos);" },
+            {
+              "name": "meta.interpolation.xquery",
+              "begin": "\\{",
+              "beginCaptures": { "0": { "name": "punctuation.section.embedded.begin.xquery" } },
+              "end": "\\}",
+              "endCaptures": { "0": { "name": "punctuation.section.embedded.end.xquery" } },
+              "patterns": [ { "include": "$self" } ]
+            }
+          ]
+        },
+        {
+          "name": "string.quoted.single.attribute.xquery",
+          "begin": "'",
+          "beginCaptures": { "0": { "name": "punctuation.definition.string.begin.xquery" } },
+          "end": "'",
+          "endCaptures": { "0": { "name": "punctuation.definition.string.end.xquery" } },
+          "patterns": [
+            { "name": "constant.character.escape.xquery", "match": "''" },
+            { "name": "constant.character.escape.xquery", "match": "\\{\\{|\\}\\}" },
+            { "name": "constant.character.entity.xquery", "match": "&(?:lt|gt|amp|quot|apos);" },
+            {
+              "name": "meta.interpolation.xquery",
+              "begin": "\\{",
+              "beginCaptures": { "0": { "name": "punctuation.section.embedded.begin.xquery" } },
+              "end": "\\}",
+              "endCaptures": { "0": { "name": "punctuation.section.embedded.end.xquery" } },
+              "patterns": [ { "include": "$self" } ]
+            }
+          ]
+        }
+      ]
+    },
+
     "variables": {
       "patterns": [
         {
@@ -170,7 +216,7 @@
                 "2": { "name": "keyword.operator.assignment.attribute.xquery" }
               }
             },
-            { "include": "#strings" },
+            { "include": "#attribute-values" },
             { "name": "constant.character.entity.xquery", "match": "&(?:lt|gt|amp|quot|apos);" }
           ]
         },
@@ -194,7 +240,7 @@
                 "2": { "name": "keyword.operator.assignment.attribute.xquery" }
               }
             },
-            { "include": "#strings" },
+            { "include": "#attribute-values" },
             { "name": "constant.character.entity.xquery", "match": "&(?:lt|gt|amp|quot|apos);" }
           ]
         },
@@ -292,7 +338,7 @@
         },
         {
           "name": "support.function.builtin.xquery",
-          "match": "\\b(?:abs|adjust-date-to-timezone|adjust-dateTime-to-timezone|adjust-time-to-timezone|analyze-string|apply|available-environment-variables|avg|base-uri|boolean|ceiling|codepoint-equal|codepoints-to-string|collection|compare|concat|contains|contains-token|current-date|current-dateTime|current-time|data|dateTime|days-from-duration|deep-equal|default-collation|default-language|distinct-values|doc|doc-available|document-uri|empty|encode-for-uri|ends-with|environment-variable|error|escape-html-uri|exists|exactly-one|false|filter|floor|fold-left|fold-right|for-each|for-each-pair|format-date|format-dateTime|format-integer|format-number|function-arity|function-lookup|function-name|head|hours-from-dateTime|hours-from-duration|hours-from-time|id|idref|implicit-timezone|in-scope-prefixes|index-of|insert-before|iri-to-uri|json-doc|json-to-xml|lang|last|load-xquery-module|local-name|local-name-from-QName|lower-case|max|min|minutes-from-dateTime|minutes-from-duration|minutes-from-time|month-from-date|month-from-dateTime|months-from-duration|name|namespace-uri|namespace-uri-for-prefix|namespace-uri-from-QName|node-name|nilled|normalize-space|normalize-unicode|not|number|one-or-more|outermost|innermost|parse-json|parse-xml|parse-xml-fragment|path|position|prefix-from-QName|random-number-generator|remove|replace|resolve-QName|resolve-uri|reverse|root|round|round-half-to-even|round-half-to-odd|seconds-from-dateTime|seconds-from-duration|seconds-from-time|serialize|starts-with|static-base-uri|string|string-join|string-length|string-to-codepoints|subsequence|sum|tail|timezone-from-date|timezone-from-dateTime|timezone-from-time|tokenize|trace|translate|true|unordered|upper-case|uri-collection|year-from-date|year-from-dateTime|years-from-duration|unparsed-text|unparsed-text-available|unparsed-text-lines|unparsed-entity-uri|unparsed-entity-public-id)\\s*(?=\\()"
+          "match": "\\b(?:abs|adjust-date-to-timezone|adjust-dateTime-to-timezone|adjust-time-to-timezone|analyze-string|apply|available-environment-variables|avg|base-uri|boolean|ceiling|codepoint-equal|codepoints-to-string|collection|compare|concat|contains|contains-token|current-date|current-dateTime|current-time|data|dateTime|days-from-duration|deep-equal|default-collation|default-language|distinct-values|doc|doc-available|document-uri|empty|encode-for-uri|ends-with|environment-variable|error|escape-html-uri|exists|exactly-one|false|filter|floor|fold-left|fold-right|for-each|for-each-pair|format-date|format-dateTime|format-integer|format-number|function-arity|function-lookup|function-name|head|hours-from-dateTime|hours-from-duration|hours-from-time|id|idref|implicit-timezone|in-scope-prefixes|index-of|insert-before|iri-to-uri|json-doc|json-to-xml|lang|last|load-xquery-module|local-name|local-name-from-QName|lower-case|max|min|minutes-from-dateTime|minutes-from-duration|minutes-from-time|month-from-date|month-from-dateTime|months-from-duration|name|namespace-uri|namespace-uri-for-prefix|namespace-uri-from-QName|node-name|nilled|normalize-space|normalize-unicode|not|number|one-or-more|outermost|innermost|parse-json|parse-xml|parse-xml-fragment|path|position|prefix-from-QName|random-number-generator|remove|replace|resolve-QName|resolve-uri|reverse|root|round-half-to-even|round-half-to-odd|round|seconds-from-dateTime|seconds-from-duration|seconds-from-time|serialize|starts-with|static-base-uri|string|string-join|string-length|string-to-codepoints|subsequence|sum|tail|timezone-from-date|timezone-from-dateTime|timezone-from-time|tokenize|trace|translate|true|unordered|upper-case|uri-collection|year-from-date|year-from-dateTime|years-from-duration|unparsed-text|unparsed-text-available|unparsed-text-lines|unparsed-entity-uri|unparsed-entity-public-id)\\s*(?=\\()"
         }
       ]
     },
