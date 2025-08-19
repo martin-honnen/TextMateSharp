@@ -53,6 +53,7 @@
             "VB",
             "XML",
             "XPath",
+            "XQuery",
             "YAML"
         };
     }

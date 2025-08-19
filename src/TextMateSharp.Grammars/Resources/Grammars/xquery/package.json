@@ -1,0 +1,42 @@
+{
+  "name": "xquery",
+  "displayName": "%displayName%",
+  "description": "%description%",
+  "version": "1.0.0",
+  "publisher": "vscode",
+  "license": "MIT",
+  "engines": {
+    "vscode": "*"
+  },
+  "contributes": {
+    "languages": [
+      {
+        "id": "xquery",
+        "extensions": [
+          ".xq",
+          ".xquery",
+          ".xqm",
+          ".xqy",
+          ".xql",
+          ".xqu"
+        ],
+        "aliases": [
+          "XQuery",
+          "xquery"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "xquery",
+        "scopeName": "source.xquery",
+        "path": "./syntaxes/xquery.tmLanguage.json"
+      }
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/microsoft/vscode.git"
+  }
+}

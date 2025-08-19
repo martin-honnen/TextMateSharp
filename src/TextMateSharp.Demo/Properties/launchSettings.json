@@ -8,6 +8,10 @@
       "commandName": "Project",
       "commandLineArgs": "../../../testdata/samplefiles/sample2.xpath"
     },
+    "TextMateSharp.Demo - xqueryfile": {
+      "commandName": "Project",
+      "commandLineArgs": "../../../testdata/samplefiles/sample.xquery"
+    },
     "TexMateSharp.Demo - bigfile": {
       "commandName": "Project",
       "commandLineArgs": "../../../testdata/samplefiles/bigfile.cs"
